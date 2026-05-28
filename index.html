@@ -1,0 +1,62 @@
+```html
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>APK Keuangan</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>💰 APK Keuangan</h1>
+
+      <!-- SALDO -->
+      <div class="saldo">
+        <h2>Total Saldo</h2>
+
+        <p id="totalSaldo">Rp 0</p>
+      </div>
+
+      <!-- FORM -->
+      <div class="card">
+        <input type="text" id="keterangan" placeholder="Masukkan Keterangan" />
+
+        <input type="number" id="jumlah" placeholder="Masukkan Jumlah Uang" />
+
+        <select id="jenis">
+          <option value="Pemasukan">Pemasukan</option>
+
+          <option value="Pengeluaran">Pengeluaran</option>
+        </select>
+
+        <select id="kategori">
+          <option value="Makanan">Makanan</option>
+
+          <option value="Transport">Transport</option>
+
+          <option value="Belanja">Belanja</option>
+
+          <option value="Gaji">Gaji</option>
+
+          <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <button onclick="simpanData()">Simpan Transaksi</button>
+      </div>
+
+      <!-- RIWAYAT -->
+      <div class="list-transaksi">
+        <h2>📋 Riwayat Transaksi</h2>
+
+        <ul id="transaksiList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```

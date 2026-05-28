@@ -1,0 +1,239 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* CARD */
+.card,
+.saldo,
+.list-transaksi {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* SALDO */
+.saldo {
+  text-align: center;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.saldo h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+#totalSaldo {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+/* INPUT */
+input,
+select,
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 14px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* INPUT STYLE */
+input,
+select {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+select option {
+  color: black;
+}
+
+/* INPUT FOCUS */
+input:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.01);
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* RIWAYAT */
+.list-transaksi h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+/* LIST */
+#transaksiList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ITEM */
+#transaksiList li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  animation: fadeIn 0.4s ease;
+}
+
+#transaksiList li:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* GARIS KIRI */
+#transaksiList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+}
+
+/* PEMASUKAN */
+.masuk::before {
+  background: #22c55e;
+}
+
+/* PENGELUARAN */
+.keluar::before {
+  background: #ef4444;
+}
+
+/* TEXT */
+.jenis {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.keterangan {
+  margin-top: 4px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.nominal {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* WARNA NOMINAL */
+.masuk .nominal {
+  color: #4ade80;
+}
+
+.keluar .nominal {
+  color: #f87171;
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  #totalSaldo {
+    font-size: 28px;
+  }
+
+  .card,
+  .saldo,
+  .list-transaksi {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+    padding: 13px;
+  }
+}
